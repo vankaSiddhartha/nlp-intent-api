@@ -25,7 +25,7 @@ nlpManager.addDocument('en','missed the question','unknow')
 // Train the NLP manager
 nlpManager.train().then( (result) => {
       nlpManager.save()
-    app.get('/nlp',async (req,res)=>{
+    app.get('/check',async (req,res)=>{
   let responce = await nlpManager.process('en',req.query.message)
   res.send(responce.intent)
     
