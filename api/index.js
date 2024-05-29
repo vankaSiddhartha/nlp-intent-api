@@ -11,6 +11,7 @@ nlpManager.addDocument('en','restate the question','repeat')
 nlpManager.addDocument('en','go over the question again','repeat')
 nlpManager.addDocument('en','clarify the question,','repeat')
 nlpManager.addDocument('en','saying that again','repeat')
+
 nlpManager.addDocument('en','repeat that last part','repeat')
 nlpManager.addDocument('en','dont understand','repeat')
 nlpManager.addDocument('en','some clarification','repeat')
