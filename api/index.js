@@ -20,7 +20,9 @@ nlpManager.addDocument('en','dont know','unknow')
 nlpManager.addDocument('en','not sure','unknow')
 nlpManager.addDocument('en','missed the question','unknow')
 
-
+app.get('/',(req,res)=>{
+  res.send("hello")
+})
 
 // Train the NLP manager
 nlpManager.train().then( (result) => {
