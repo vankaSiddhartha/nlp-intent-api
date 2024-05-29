@@ -1,0 +1,518 @@
+{
+  "settings": {
+    "languages": [
+      "en"
+    ],
+    "tag": "nlp",
+    "threshold": 0.5,
+    "autoLoad": true,
+    "autoSave": true,
+    "modelFileName": "model.nlp",
+    "executeActionsBeforeAnswers": false,
+    "calculateSentiment": true
+  },
+  "nluManager": {
+    "settings": {
+      "tag": "nlu-manager"
+    },
+    "locales": [
+      "en"
+    ],
+    "languageNames": {},
+    "domainManagers": {
+      "en": {
+        "settings": {
+          "locale": "en",
+          "trainByDomain": false,
+          "tag": "domain-manager-en",
+          "nluByDomain": {
+            "default": {
+              "className": "NeuralNlu",
+              "settings": {}
+            }
+          },
+          "useStemDict": true
+        },
+        "stemDict": {
+          "repeat": {
+            "intent": "repeat",
+            "domain": "default"
+          },
+          "again,say,that": {
+            "intent": "repeat",
+            "domain": "default"
+          },
+          "question,repeat,the": {
+            "intent": "repeat",
+            "domain": "default"
+          },
+          "repeat,that": {
+            "intent": "repeat",
+            "domain": "default"
+          },
+          "question,restat,the": {
+            "intent": "repeat",
+            "domain": "default"
+          },
+          "again,go,over,question,the": {
+            "intent": "repeat",
+            "domain": "default"
+          },
+          "clarifi,question,the": {
+            "intent": "repeat",
+            "domain": "default"
+          },
+          "last,part,repeat,that": {
+            "intent": "repeat",
+            "domain": "default"
+          },
+          "dont,understand": {
+            "intent": "repeat",
+            "domain": "default"
+          },
+          "clarif,some": {
+            "intent": "repeat",
+            "domain": "default"
+          },
+          "didnt,get,question,the": {
+            "intent": "repeat",
+            "domain": "default"
+          },
+          "dont,know": {
+            "intent": "unknow",
+            "domain": "default"
+          },
+          "not,sure": {
+            "intent": "unknow",
+            "domain": "default"
+          },
+          "miss,question,the": {
+            "intent": "unknow",
+            "domain": "default"
+          }
+        },
+        "intentDict": {
+          "repeat": "default",
+          "unknow": "default"
+        },
+        "sentences": [
+          {
+            "domain": "default",
+            "utterance": "repeat",
+            "intent": "repeat"
+          },
+          {
+            "domain": "default",
+            "utterance": "say that again",
+            "intent": "repeat"
+          },
+          {
+            "domain": "default",
+            "utterance": "repeat the question",
+            "intent": "repeat"
+          },
+          {
+            "domain": "default",
+            "utterance": "repeating the question",
+            "intent": "repeat"
+          },
+          {
+            "domain": "default",
+            "utterance": "repeat that",
+            "intent": "repeat"
+          },
+          {
+            "domain": "default",
+            "utterance": "restate the question",
+            "intent": "repeat"
+          },
+          {
+            "domain": "default",
+            "utterance": "go over the question again",
+            "intent": "repeat"
+          },
+          {
+            "domain": "default",
+            "utterance": "clarify the question,",
+            "intent": "repeat"
+          },
+          {
+            "domain": "default",
+            "utterance": "saying that again",
+            "intent": "repeat"
+          },
+          {
+            "domain": "default",
+            "utterance": "repeat that last part",
+            "intent": "repeat"
+          },
+          {
+            "domain": "default",
+            "utterance": "dont understand",
+            "intent": "repeat"
+          },
+          {
+            "domain": "default",
+            "utterance": "some clarification",
+            "intent": "repeat"
+          },
+          {
+            "domain": "default",
+            "utterance": "dont understand.",
+            "intent": "repeat"
+          },
+          {
+            "domain": "default",
+            "utterance": "didnt get the question.",
+            "intent": "repeat"
+          },
+          {
+            "domain": "default",
+            "utterance": "dont know",
+            "intent": "unknow"
+          },
+          {
+            "domain": "default",
+            "utterance": "not sure",
+            "intent": "unknow"
+          },
+          {
+            "domain": "default",
+            "utterance": "missed the question",
+            "intent": "unknow"
+          }
+        ],
+        "domains": {
+          "master_domain": {
+            "settings": {
+              "locale": "en",
+              "tag": "nlu-en",
+              "keepStopwords": true,
+              "nonefeatureValue": 1,
+              "nonedeltaMultiplier": 1.2,
+              "spellCheck": false,
+              "spellCheckDistance": 1,
+              "filterZeros": true,
+              "log": true
+            },
+            "features": {
+              "repeat": 1,
+              "say": 1,
+              "that": 1,
+              "again": 1,
+              "the": 1,
+              "question": 1,
+              "restat": 1,
+              "go": 1,
+              "over": 1,
+              "clarifi": 1,
+              "last": 1,
+              "part": 1,
+              "dont": 1,
+              "understand": 1,
+              "some": 1,
+              "clarif": 1,
+              "didnt": 1,
+              "get": 1,
+              "know": 1,
+              "not": 1,
+              "sure": 1,
+              "miss": 1
+            },
+            "intents": {
+              "repeat": 1,
+              "unknow": 1
+            },
+            "intentFeatures": {
+              "repeat": {
+                "repeat": 1,
+                "say": 1,
+                "that": 1,
+                "again": 1,
+                "the": 1,
+                "question": 1,
+                "restat": 1,
+                "go": 1,
+                "over": 1,
+                "clarifi": 1,
+                "last": 1,
+                "part": 1,
+                "dont": 1,
+                "understand": 1,
+                "some": 1,
+                "clarif": 1,
+                "didnt": 1,
+                "get": 1
+              },
+              "unknow": {
+                "dont": 1,
+                "know": 1,
+                "not": 1,
+                "sure": 1,
+                "miss": 1,
+                "the": 1,
+                "question": 1
+              }
+            },
+            "featuresToIntent": {
+              "repeat": [
+                "repeat"
+              ],
+              "say": [
+                "repeat"
+              ],
+              "that": [
+                "repeat"
+              ],
+              "again": [
+                "repeat"
+              ],
+              "the": [
+                "repeat",
+                "unknow"
+              ],
+              "question": [
+                "repeat",
+                "unknow"
+              ],
+              "restat": [
+                "repeat"
+              ],
+              "go": [
+                "repeat"
+              ],
+              "over": [
+                "repeat"
+              ],
+              "clarifi": [
+                "repeat"
+              ],
+              "last": [
+                "repeat"
+              ],
+              "part": [
+                "repeat"
+              ],
+              "dont": [
+                "repeat",
+                "unknow"
+              ],
+              "understand": [
+                "repeat"
+              ],
+              "some": [
+                "repeat"
+              ],
+              "clarif": [
+                "repeat"
+              ],
+              "didnt": [
+                "repeat"
+              ],
+              "get": [
+                "repeat"
+              ],
+              "know": [
+                "unknow"
+              ],
+              "not": [
+                "unknow"
+              ],
+              "sure": [
+                "unknow"
+              ],
+              "miss": [
+                "unknow"
+              ]
+            },
+            "neuralNetwork": {
+              "settings": {
+                "locale": "en",
+                "tag": "nlu-en",
+                "keepStopwords": true,
+                "nonefeatureValue": 1,
+                "nonedeltaMultiplier": 1.2,
+                "spellCheck": false,
+                "spellCheckDistance": 1,
+                "filterZeros": true,
+                "log": true
+              },
+              "features": [
+                "repeat",
+                "say",
+                "that",
+                "again",
+                "the",
+                "question",
+                "restat",
+                "go",
+                "over",
+                "clarifi",
+                "last",
+                "part",
+                "dont",
+                "understand",
+                "some",
+                "clarif",
+                "didnt",
+                "get",
+                "know",
+                "not",
+                "sure",
+                "miss"
+              ],
+              "intents": [
+                "repeat",
+                "unknow"
+              ],
+              "perceptrons": [
+                [
+                  6.211027145385742,
+                  2.383868455886841,
+                  0.6614732146263123,
+                  3.6275341510772705,
+                  0.29731014370918274,
+                  0.29731014370918274,
+                  6.048464298248291,
+                  1.2427805662155151,
+                  1.2427805662155151,
+                  6.044784069061279,
+                  -0.09774819761514664,
+                  -0.09774819761514664,
+                  -0.28687456250190735,
+                  6.991912364959717,
+                  3.3655357360839844,
+                  3.3655357360839844,
+                  3.040062189102173,
+                  3.040062189102173,
+                  -7.277376174926758,
+                  -3.776453733444214,
+                  -3.776453733444214,
+                  -9.102864265441895,
+                  7.585369846546323
+                ],
+                [
+                  -3.150439500808716,
+                  -0.6678043603897095,
+                  -0.7897143959999084,
+                  -1.499409556388855,
+                  0.12851648032665253,
+                  0.12851648032665253,
+                  -3.136871337890625,
+                  -0.8274807333946228,
+                  -0.8274807333946228,
+                  -3.136796474456787,
+                  -0.002458317205309868,
+                  -0.002458317205309868,
+                  2.8419878482818604,
+                  -5.721855640411377,
+                  -1.4399358034133911,
+                  -1.4399358034133911,
+                  -1.568446397781372,
+                  -1.568446397781372,
+                  8.563843727111816,
+                  5.7029218673706055,
+                  5.7029218673706055,
+                  11.148658752441406,
+                  2.8798795614287545
+                ]
+              ]
+            }
+          }
+        }
+      }
+    },
+    "intentDomains": {},
+    "extraSentences": [
+      [
+        "en",
+        "repeat"
+      ],
+      [
+        "en",
+        "say that again"
+      ],
+      [
+        "en",
+        "repeat the question"
+      ],
+      [
+        "en",
+        "repeating the question"
+      ],
+      [
+        "en",
+        "repeat that"
+      ],
+      [
+        "en",
+        "restate the question"
+      ],
+      [
+        "en",
+        "go over the question again"
+      ],
+      [
+        "en",
+        "clarify the question,"
+      ],
+      [
+        "en",
+        "saying that again"
+      ],
+      [
+        "en",
+        "repeat that last part"
+      ],
+      [
+        "en",
+        "dont understand"
+      ],
+      [
+        "en",
+        "some clarification"
+      ],
+      [
+        "en",
+        "dont understand."
+      ],
+      [
+        "en",
+        "didnt get the question."
+      ],
+      [
+        "en",
+        "dont know"
+      ],
+      [
+        "en",
+        "not sure"
+      ],
+      [
+        "en",
+        "missed the question"
+      ]
+    ]
+  },
+  "ner": {
+    "settings": {
+      "tag": "ner",
+      "entityPreffix": "%",
+      "entitySuffix": "%"
+    },
+    "rules": {}
+  },
+  "nlgManager": {
+    "settings": {
+      "tag": "nlg-manager"
+    },
+    "responses": {}
+  },
+  "actionManager": {
+    "settings": {
+      "tag": "action-manager"
+    },
+    "actions": {}
+  },
+  "slotManager": {}
+}

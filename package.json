@@ -1,0 +1,15 @@
+{
+  "name": "nlp",
+  "version": "1.0.0",
+  "description": "api for intrvuai",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "vanka siddhartha",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "node-nlp": "^4.27.0"
+  }
+}
